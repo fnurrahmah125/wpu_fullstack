@@ -9,7 +9,7 @@ Hypertext Markup Language. Digunakan untuk menyajikan konten dan struktur dari h
 ## Tag pada HTML
 
 Tag yang bisa disimpan di bagian `<head></head>`
-- Judul Halaman
+- Judul halaman
   
   `<title></title>`
 - CSS
@@ -82,25 +82,103 @@ accesskey, class, id, dir, lang, style, tabindex, title
 
 Heading 1 lebih penting dari heading-heading di bawahnya.
 
-![image](https://github.com/fnurrahmah125/wpu_html/assets/54012198/089a8c45-a193-46ed-a16f-70f1bd5c82c6) ![image](https://github.com/fnurrahmah125/wpu_html/assets/54012198/7e45c41b-f115-4a34-b57b-06acf44eb5f8)
+``` html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
 
 ## List
 
 - `<ol></ol>` : untuk membuat list terurut (ordered list)
+  
   ``` html
   <ol>
     <li>item 1</li>
     <li>item 2</li>
   </ol>
-  
+
+  <ol type="1"></ol>
+  <ol type="A"></ol>
+  <ol type="a"></ol>
+  <ol type="I"></ol>
+  <ol type="i"></ol>
   ```
 - `<ul></ul>` : untuk membuat list tidak terurut (unorder list)
+
+   ``` html
+  <ul type="disc"></ul>  
+  <ul type="square"></ul>  
+  <ul type="circle"></ul>  
+  ```
 - `<dl></dl>` : untuk membuat daftar definisi atau terminologi (definition list)
+   ``` html
+  <dl>
+    <dt><strong>HTML</strong></dt>
+    <dd>Hypertext Markup Language</dd>
+    <dt><strong>CSS</strong></dt>
+    <dd>Cascading Style Sheet</dd>
+  </dl>
+  ```
+  
+## Hyperlink
 
+`<a href=""></a>` anchor
 
+- External link
+  
+  `https://www.google.com/`
+  
+  `https://twitter.com/`
+  
+- Internal link / Relative Url
 
+  `product.html`
+  
+  `../admin/index.html`
+  
+- Page anchor
 
+  `#about`
 
+  `index.html#contact`
+  
+- Target
+
+  `<a href="user/halaman1.html" target="_blank">Halaman 1</a>`
+  
+  `<a href="user/halaman1.html" target="_self">Halaman 1</a>`
+  
+  `<a href="user/halaman1.html" target="_parent">Halaman 1</a>`
+  
+  `<a href="user/halaman1.html" target="_top">Halaman 1</a>`
+
+## Image
+
+- Internal resource
+
+  `<img src="images/logo.png">`
+  
+- External resource / hotlink (tidak disarankan)
+
+  `<img src="https://unsplash.it/640/425">`
+  
+- Attribute dan value pada tag `<img>`
+  
+  `<img src="" alt="" title="" width="" height="">`
+  
+  Untuk **width** dan **height** jika ditulis angka saja maka ukurannya akan berbentuk pixel, jika ditambah persen (%) maka ukurannya akan relative terhadap halamannya.
+
+- Hyperlink + image
+
+  ```html
+  <a href="https://google.com/">
+    <img src="image-1.jpg">
+  </a>
+  ```
 
 
 
