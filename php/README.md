@@ -85,7 +85,7 @@
   ```
 - var_dump (untuk debugging)
   ```php
-  var_dump("Hello World!); // string(12) "Hello World!"
+  var_dump("Hello World!"); // string(12) "Hello World!"
   ```
   
 ### Variable
@@ -94,8 +94,77 @@ Tidak boleh di awali dengan angka, tapi boleh mengandung angka
 ```php
 $text = "Hello World!";
 $x = 123;
+
+$nama = "Kang Seul-gi";
+
+// 👉 interpolasi
+echo 'Halo, nama saya $nama'; // Halo, nama saya $nama
+echo "Halo, nama saya $nama"; // Halo, nama saya Kang Seul-gi
 ```
+
 ### Operator
+#### Aritmatika
+
+```php
+// 👉 + - * / %
+
+echo 100 + 100; // 200
+
+$x = 10;
+$y = 20;
+echo $x * $y; // 200
+```
+
+#### Penggabungan String / Concatenation / Concat
+
+```php
+// 👉 .
+
+$nama_depan = "Bae";
+$nama_belakang = "Joo hyun";
+echo $nama_depan . " " . $nama_belakang; // Bae Joo hyun
+```
+
+#### Assignment
+
+```php
+// 👉 =, +=, -=, *=, /=, %=, .=
+
+$i = 5;
+$i -= 1;
+echo $i; // 4
+
+$name = "Kim";
+$name .= " ";
+$name .= "Ye-rim";
+echo $name; // Kim Ye-rim
+```
+
+#### Perbandingan
+
+```php
+// 👉 <, >, <=, >=, ==
+
+var_dump(1 == "1"); // bool(true)
+```
+
+#### Identitas
+
+```php
+// 👉 ===, !==
+
+var_dump(1 === "1"); // bool(false)
+```
+
+#### Logika
+
+```php
+// 👉 &&, ||, !
+
+$j = 10;
+var_dump($j < 20 && $j % 2 == 0); // bool(true)
+```
+
 
 
 
