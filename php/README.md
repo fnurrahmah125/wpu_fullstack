@@ -29,3 +29,13 @@
 - Upload file
 - Reporting
 - Web hosting
+
+## Karakteristik bahasa PHP
+
+- Ekstensi file .php
+- Ditulis di dalam tag php
+  - delimiter
+  - diawali dengan <?php
+  - diakhiri dengan ?>
+- bisa digunakan bersamaan dengan HTML
+- mengikuti bahasa C
