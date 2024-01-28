@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h4 {
+    font-size: 3rem;
+    /* @apply text-custom; will convert color HEX to RGB*/
+    color: theme(colors.custom);
+  }
+
+  .custom-text {
+    @apply text-2xl bg-orange-500 text-white;
+  }
+}
+
+@layer utilities {
+  #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-5;
+  }
+}
