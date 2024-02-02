@@ -165,6 +165,99 @@ $j = 10;
 var_dump($j < 20 && $j % 2 == 0); // bool(true)
 ```
 
+### Control Flow / Struktur Kendali
+#### Pengulangan
+- for
+  ```php
+  for ($i = 0; $i < 5; $i++) {
+    echo "'For' loop $i <br />";
+  }
+  ```
+- while
+  ```php
+  $i = 0;
+  while($i < 5) {
+    echo "'While' loop $i <br />";
+    $j++;
+  }
+  ```
+- do.. while
+  ```php
+  $i = 0;
+  do {
+    echo "'do.. while' loop $i <br />";
+    $i++;
+  } while ($i < 5);
+  ```
+- foreach (pengulangan khusus array)
+  
+#### Pengkondisian
+- if.. else
+  ```php
+  $x = 23;
+  if($x < 20) {
+    echo "true";
+  } else {
+    echo "false";
+  }
+  ```
+- if.. else if.. else
+  ```php
+  $x = 20;
+  if($x < 20) {
+    echo "true";
+  } else if($x == 20) {
+    echo "bingo";
+  } else {
+    echo "false";
+  }
+  ```
+- ternary
+- switch
+
+**Contoh penggunaan 'for'**
+```php
+<table border="1" cellpadding="10" cellspacing="0">
+  <?php 
+    for ($i = 1; $i <= 3; $i++) {
+      echo "<tr>";
+      for ($j = 1; $j <=5; $j++) {
+        echo "<td>$i,$j</td>";
+      }
+      echo "</tr>";
+    }
+  ?>
+</table>
+
+// 👉 menggunakan sintaks templating
+<table border="1" cellpadding="10" cellspacing="0">
+  <?php for($i = 1; $i <= 3; $i++) : ?>
+    <tr>
+      <?php for($j = 1; $j <= 5; $j++) : ?>
+        <td><?php echo "$i, $j"; ?></td>
+      <?php endfor; ?>
+    </tr>
+  <?php endfor; ?>
+</table>
+```
+![image](https://github.com/fnurrahmah125/wpu_fullstack/assets/54012198/2737408b-4c8f-4830-ae6d-69c5e1a3e5c3)
 
 
+**Contoh penggunaan 'if.. else'**
+```php
+<table border="1" cellpadding="10" cellspacing="0">
+  <?php for($i = 1; $i <= 5; $i++) : ?>
+    <?php if($i % 2 == 1) : ?>
+      <tr class="warna-baris">
+    <?php else : ?>
+      <tr>
+    <?php endif; ?>
+      <?php for($j = 1; $j <= 5; $j++) : ?>
+        <td><?php echo "$i, $j"; ?></td>
+      <?php endfor; ?>
+    </tr>
+  <?php endfor; ?>
+</table>
+```
+![image](https://github.com/fnurrahmah125/wpu_fullstack/assets/54012198/86667e3f-134c-481c-96eb-ecd74b865e63)
 
