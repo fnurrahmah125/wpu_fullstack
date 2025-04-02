@@ -180,13 +180,47 @@ Heading 1 lebih penting dari heading-heading di bawahnya.
   </a>
   ```
 
+## Table
 
+  ```html
+  <table>
+    <tr>
+      <td>baris 1, kolom 1</td>
+      <td>baris 1, kolom 2</td>
+    </tr>
+    <tr>
+      <td>baris 2, kolom 1</td>
+      <td>baris 2, kolom 2</td>
+    </tr>  
+  </table>
+  ```
+- Atribut pada tag table
+  - border
+  - cellspacing
+  - cellpadding
+  - colspan
+  - rowspan
 
+- Table mergering
+  - colspan: menggabungkan 2 atau lebih kolom
+  - rowspan: menggabungkan 2 atau lebih baris
 
-
-
-
-
+  ```html
+  <table border="2" cellspacing="0" cellpadding="10">
+    <tr>
+      <td rowspan="3">Rowspan 3</td>
+      <td colspan="2">Colspan 2</td>
+    </tr>
+    <tr>
+      <td>2,2</td>
+      <td>2,3</td>
+    </tr>
+    <tr>
+      <td>3,2</td>
+      <td>3,3</td>
+    </tr>  
+  </table>
+  ```
 
 
 
